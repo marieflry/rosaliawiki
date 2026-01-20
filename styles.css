@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #101010;
+  color: #eaeaea;
+  margin: 0;
+}
+
+:root {
+  --header-height: 0px;
+}
+
+header {
+  background-color: #0a0a0a;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #b8003a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  color: #b8003a;
+}
+
+nav {
+  background-color: #0a0a0a;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 999;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  will-change: transform;
+}
+
+nav.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav a {
+  color: #eaeaea;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #b8003a;
+}
+
+section {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: left;
+  border-left: 6px solid #b8003a;
+  border-bottom: 1px solid rgba(255, 59, 48, 0.3);
+  position: relative;
+  background-color: #141414;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #141414;
+}
+
+tr:nth-child(even) {
+  background-color: #141414;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+td:has(> img) {
+  white-space: nowrap;
+}
+
+.img-url-icon {
+  display: inline-block;
+  margin-left: 8px;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.img-url-icon:hover {
+  opacity: 1;
+}
+
+.command {
+  background-color: #141414;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 4px solid #b8003a;
+}
+
+.command code {
+  color: #ffd54f;
+  font-size: 1.05em;
+}
+
+footer {
+  background-color: #141414;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #aaa;
+}
